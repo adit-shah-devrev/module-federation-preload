@@ -2,9 +2,13 @@
   "name": "@module-federation-preload/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "remote:dev": "nx run remote:dev -- --port 3001",
+    "host:dev": "nx run host:dev -- --port 3000"
+  },
   "private": true,
   "dependencies": {
+    "@module-federation/nextjs-mf": "^8.8.24",
     "next": "~15.2.4",
     "react": "19.0.0",
     "react-dom": "19.0.0"

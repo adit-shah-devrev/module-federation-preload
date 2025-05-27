@@ -23,6 +23,12 @@ const nextConfig = {
         filename: 'static/chunks/remoteEntry.js',
         name: 'remote',
         remotes: {},
+        shared: {
+          '@module-federation-preload/contexts': {
+            requiredVersion: false,
+            singleton: true,
+          },
+        },
       })
     );
 

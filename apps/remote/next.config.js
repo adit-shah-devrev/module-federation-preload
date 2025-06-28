@@ -18,6 +18,7 @@ const nextConfig = {
       new NextFederationPlugin({
         exposes: {
           './hello-world': './components/hello-world.tsx',
+          './use-routing': './hooks/use-routing.ts',
         },
         extraOptions: {},
         filename: 'static/chunks/remoteEntry.js',

@@ -1,18 +1,14 @@
-// @ts-expect-error-next-line
-import { HelloWorld } from 'remote/hello-world';
-import { NameContextProvider } from '@module-federation-preload/contexts';
+import { useEffect } from 'react';
+//@ts-expect-error-next-line
+import { useRouter } from 'remote/use-routing';
 
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
-  return (
-    <NameContextProvider name="remote">
-      <HelloWorld />
-    </NameContextProvider>
-  );
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/home');
+  }, [router]);
+
+  return null;
 }
 
 export default Index;

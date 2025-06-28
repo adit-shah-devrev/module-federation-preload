@@ -8,8 +8,8 @@
   },
   "private": true,
   "dependencies": {
-    "@module-federation/nextjs-mf": "8.8.27",
-    "next": "15.3.2",
+    "@module-federation/nextjs-mf": "0.0.0-next-20250616235047",
+    "next": "15.3.3",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },

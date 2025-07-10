@@ -13,7 +13,7 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
-  webpack: (config) => {
+  webpack: (config, options) => {
     config.plugins.push(
       new NextFederationPlugin({
         exposes: {
@@ -28,6 +28,10 @@ const nextConfig = {
           '@module-federation-preload/contexts': {
             requiredVersion: false,
             singleton: true,
+            // issuerLayer: options.isServer
+            //   ? 'pages-dir-node'
+            //   : 'pages-dir-browser',
+            // layer: options.isServer ? 'pages-dir-node' : 'pages-dir-browser',
           },
         },
       })

@@ -32,6 +32,10 @@ const nextConfig = {
           '@module-federation-preload/contexts': {
             requiredVersion: false,
             singleton: true,
+            // issuerLayer: options.isServer
+            //   ? 'pages-dir-node'
+            //   : 'pages-dir-browser',
+            // layer: options.isServer ? 'pages-dir-node' : 'pages-dir-browser',
           },
         },
       })

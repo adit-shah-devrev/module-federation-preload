@@ -1,6 +1,9 @@
 // @ts-expect-error-next-line
 import { HelloWorld } from 'remote/hello-world';
-import { NameContextProvider } from '@module-federation-preload/contexts';
+import {
+  AccordionComponent,
+  NameContextProvider,
+} from '@module-federation-preload/contexts';
 
 export function Home() {
   /*
@@ -11,6 +14,7 @@ export function Home() {
   return (
     <NameContextProvider name="remote">
       <HelloWorld />
+      <AccordionComponent name="host" />
     </NameContextProvider>
   );
 }

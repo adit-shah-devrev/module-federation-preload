@@ -1,11 +1,16 @@
 import React from 'react';
-import { useNameContext } from '@module-federation-preload/contexts';
+import * as Accordion from '@radix-ui/react-accordion';
+import {
+  AccordionComponent,
+  useNameContext,
+} from '@module-federation-preload/contexts';
 
-export const HelloWorld = () => {
+export function HelloWorld() {
   const { name } = useNameContext();
+
   console.log('useNameContext', name);
 
-  return <div>Hello World from {name}</div>;
-};
+  return <AccordionComponent name={name} />;
+}
 
 export default HelloWorld;

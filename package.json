@@ -8,8 +8,9 @@
   },
   "private": true,
   "dependencies": {
-    "@module-federation/nextjs-mf": "^0.0.0-next-20250709075526",
-    "next": "15.3.3",
+    "@module-federation/nextjs-mf": "0.0.0-next-20250709075526",
+    "@radix-ui/react-accordion": "^1.2.8",
+    "next": "15.3.5",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -47,5 +48,9 @@
   "workspaces": [
     "apps/*",
     "libs/*"
-  ]
+  ],
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
 }
